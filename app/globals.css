@@ -183,6 +183,8 @@
   left: 50%;
 }
 
+
+
 @media screen and (max-width: 500px) {
   .sm-box-5,
   .sm-box-6,
@@ -196,6 +198,30 @@
   }
 }
 
+.about-card{
+  width: 30rem;
+  height: fit-content;
+  border: rgb(70, 118, 160, 0.2) 1.5px solid;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.about-flex{
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width:410px) {
+  .about-card{
+    width: 20rem;
+  }
+
+  .about-flex{
+    flex-direction: column;
+  }
+}
 .text-gradient_purple-blue {
   background: linear-gradient(90deg, #4c73ff 0%, #73e0f8 100%);
   -webkit-background-clip: text;
@@ -203,7 +229,10 @@
   background-clip: text;
   text-fill-color: transparent;
 }
-
+.blue{
+  color: #03182c;
+  background-color: #73e0f8;
+}
 .gradient_blue-purple {
   background: linear-gradient(90deg, #4ca5ff 0%, #b573f8 100%);
 }
