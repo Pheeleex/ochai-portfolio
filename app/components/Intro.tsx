@@ -3,7 +3,7 @@ import About from './About'
 
 const Intro = () => {
   return (
-    <div className='intro mt-40 flex flex-col items-center gap-6 p-4'>
+    <div className='intro mt-40 flex flex-col items-center gap-6 pt-4'>
             <span className='text-[15px] md:2xl text-white break-normal'>
                 Let's create fun experiences together</span>
         <h1 className='text-center text-[30px] md:text-5xl lg:text-6xl mb-4 break-normal 
@@ -18,7 +18,6 @@ const Intro = () => {
              I am a web developer based in Nigeria. <br />
              Open to work remotely with clients all over the world</p>
     </div>
-    <About />
     </div>
   )
 }

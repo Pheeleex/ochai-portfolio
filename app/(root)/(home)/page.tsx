@@ -6,6 +6,7 @@ import SearchForm from '@/app/components/SearchForm'
 import React, { useState } from 'react'
 import cardItems from '@/public/cardItems'
 import Intro from '@/app/components/Intro'
+import About from '@/app/components/About'
 
 const Home = () => {
   const [activeLink, setActiveLink] = useState('all')
@@ -18,6 +19,7 @@ const Home = () => {
   return (
     <main className="flex-center paddings w-full max-w-screen-2xl flex-col">
         <Intro />
+        <About />
       <section className="nav-padding w-full">
         <div className="flex-center relative min-h-[274px] w-full flex-col rounded-xl bg-banner bg-cover 
         bg-center text-center mt-8">
