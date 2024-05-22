@@ -9,7 +9,7 @@ import Intro from '@/app/components/Intro'
 import About from '@/app/components/About'
 
 const Home = () => {
-  const [activeLink, setActiveLink] = useState('all')
+  const [activeLink, setActiveLink] = useState('')
 
   const filteredCardItems = activeLink === 'all' ? cardItems : 
   cardItems.filter((item) => item.category.toLowerCase().includes(activeLink.toLowerCase()))

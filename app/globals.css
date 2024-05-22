@@ -231,6 +231,7 @@
 @media (max-width:510px) {
   .about-card{
     width: fit-content;
+    flex-direction: column;
   }
 
   .computer{

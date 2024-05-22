@@ -1,5 +1,6 @@
 import React from 'react'
 import ResponsiveCanvas from './Canvas/ComputerCanvas'
+import TechStack from './TechStack'
 
 const About = () => {
   const stacks = ['Vuejs', 'Nextjs', 'Reactjs', 'Typescript']
@@ -10,19 +11,20 @@ const About = () => {
                   <div className='canvas sm:hidden md:hidden lg:block'>
                       <ResponsiveCanvas/>
                   </div>
-                  <h1 className='text-gradient_purple-blue'>I'm very passionate about software development,  <br />i love to identify
-                    and solve problems
+                  <h1 className='text-gradient_purple-blue'>
+                  My primary goals when developing a website for clients are  problem-solving, 
+                  revenue generation, and delivering an exceptional user experience.
                   </h1>
                 </div>
             <div className='flex flex-col gap-8'>
                  <div className='about-card'>
                     <h1 className='text-gradient_purple-blue text-center text-2xl md:text-3xl lg:text-4xl '>
-                        I'm flexible with time zone communications
+                        Flexible in communicating across different time zones
                     </h1>
                  </div>
                  <div className='about-card'>
-                    <h1 className='text-gradient_purple-blue text-center text-2xl md:text-2.5xl '>
-                        I'm constantly try to improve my tech stack
+                    <h1 className='text-gradient_purple-blue text-center text-2xl md:text-2.5xl break-normal'>
+                    I'm always learning new technologies to stay at the forefront of web development.
                     </h1>
                     <div className='stack flex flex-wrap gap-4'>
                         {
@@ -36,6 +38,7 @@ const About = () => {
                  </div>
             </div>
          </div>
+         <TechStack />
     </div>
   )
 }

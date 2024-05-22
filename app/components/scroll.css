@@ -1,0 +1,38 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.auto-scroll {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.auto-scroll-content {
+  display: flex;
+  align-items: center; /* Ensures the images are vertically centered */
+  animation: scroll 20s linear infinite;
+}
+
+.auto-scroll-item {
+  flex: 0 0 auto;
+  margin: 0 10px;
+}
+
+@media (max-width: 500px) {
+  .auto-scroll-content {
+    animation: none; /* Disable animation for small screens */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .auto-scroll-content::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+}
