@@ -35,7 +35,7 @@ const Home = () => {
         <div className="mt-12 flex w-full flex-wrap justify-center
          gap-16 sm:justify-start">
            
-             { activeLink && filteredCardItems.length > 0 ? (
+           {/*  { activeLink && filteredCardItems.length > 0 ? (
              
               filteredCardItems.map((items) => (
                 <ResourceCard
@@ -51,7 +51,7 @@ const Home = () => {
               No resources found
             </p>
              )
-            }
+            } */}
         </div>
       </section>
     </main>
