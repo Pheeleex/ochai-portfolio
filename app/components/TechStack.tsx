@@ -20,7 +20,7 @@ const TechStack = () => {
                 src={stack}
                 height={100}
                 width={100}
-                className='h-3/4 w-full'
+                className='stack'
                 />
         ))
       }
@@ -29,16 +29,7 @@ const TechStack = () => {
               <Image 
                 alt='stack'
                 src={stack}
-                className='h-3/4 w-ful'
-                />
-        ))
-      }
-      {
-        TechStack.map((stack) => (
-              <Image 
-                alt='stack'
-                src={stack}
-                className='h-3/4 w-full'
+                className='stack'
                 />
         ))
       }
