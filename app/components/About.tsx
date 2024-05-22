@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className='w-full h-full mt-32'>
          <div className='about-flex justify-between items-center gap-48'>
-            <ComputersCanvas />
+          {  /*<ComputersCanvas /> */}
             <div className='flex flex-col gap-8'>
                  <div className='about-card'>
                     <h1 className='text-gradient_purple-blue text-center text-2xl md:text-3xl lg:text-4xl '>
