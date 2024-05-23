@@ -7,9 +7,10 @@ import React, { useState } from 'react'
 import cardItems from '@/public/cardItems'
 import Intro from '@/app/components/Intro'
 import About from '@/app/components/About'
+import StepCards from '@/app/components/Steps'
 
 const Home = () => {
-  const [activeLink, setActiveLink] = useState('')
+  const [activeLink, setActiveLink] = useState('all')
 
   const filteredCardItems = activeLink === 'all' ? cardItems : 
   cardItems.filter((item) => item.category.toLowerCase().includes(activeLink.toLowerCase()))
@@ -18,9 +19,14 @@ const Home = () => {
 
   return (
     <main className="flex-center paddings w-full max-w-screen-2xl flex-col">
-        <Intro />
-        <About />
-      <section className="nav-padding w-full">
+        <section className="nav-padding w-full" id="Intro">
+            <Intro />
+        </section>
+
+        <section className="nav-padding w-full" id="About">
+            <About />
+        </section>
+      <section className="nav-padding w-full mt-32" id="RecentProjects">
         <div className="flex-center relative min-h-[274px] w-full flex-col rounded-xl bg-banner bg-cover 
         bg-center text-center mt-8">
           <h1 className="sm:heading1 heading2 mb-6 text-center text-white">Recent Projects</h1>
@@ -53,8 +59,11 @@ const Home = () => {
               No resources found
             </p>
              )
-            } 
+            }
         </div>
+        <section className= "nav-padding w-full" id="Approach">
+            <StepCards />
+        </section>
       </section>
     </main>
   )

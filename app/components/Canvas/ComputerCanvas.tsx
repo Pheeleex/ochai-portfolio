@@ -27,8 +27,8 @@ const Computer = () => {
       <pointLight intensity={7} />
       <primitive
         object={scene}
-        scale={[10,4,4]}
-        position={ [-51, -8, -10]}
+        scale={1.45}
+        position={ [0, -3, -2.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -48,7 +48,7 @@ const ComputersCanvas = () => {
         <OrbitControls
           enableZoom={true} // Enable zoom to verify if model is in view
           maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2 }
         />
         <Computer/>
       </Suspense>
@@ -58,7 +58,7 @@ const ComputersCanvas = () => {
 };
 
 const ResponsiveCanvas = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(false)
+  const [isLargeScreen, setIsLargeScreen] = useState(true)
 
   useEffect(() => {
       const handleResize = ()=>{
