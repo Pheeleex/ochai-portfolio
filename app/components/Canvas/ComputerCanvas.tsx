@@ -1,10 +1,11 @@
-'use client'
+
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from '../Loader';
-import { Suspense, useEffect, useState } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import PngComputer from '../../../public/desktop/computer.png'
 import Image from "next/image";
+
 
 
 const Computer = () => {
@@ -28,7 +29,7 @@ const Computer = () => {
       <primitive
         object={scene}
         scale={1.45}
-        position={ [0, -3, -2.5]}
+        position={ [0, -4, -2.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -58,25 +59,16 @@ const ComputersCanvas = () => {
 };
 
 const ResponsiveCanvas = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(true)
-
-  useEffect(() => {
-      const handleResize = ()=>{
-        setIsLargeScreen(window.innerWidth >= 510)
-      }
-      handleResize()
-      window.addEventListener('resize', handleResize)
-      return() => {
-        window.removeEventListener('resize', handleResize)
-      }
-  }, [])
-
+ 
   return(
-    <>
-    {
-      isLargeScreen ? <ComputersCanvas /> : <Image src={PngComputer} alt="computer" />
-    }
-    </>
+    <div className="w-full h-full">
+      <div className="desktop-only w-full h-full">
+          <ComputersCanvas />
+      </div>
+      <div className="mobile-only w-full h-full">
+          <Image alt="computer" src={PngComputer} />
+      </div>
+    </div>
   ) 
 }
 export default ResponsiveCanvas
