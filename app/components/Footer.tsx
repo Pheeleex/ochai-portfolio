@@ -1,3 +1,4 @@
+import { Github, Instagram } from 'lucide-react'
 import Link from 'next/link'
 
 const Footer = () => {
@@ -9,6 +10,8 @@ const Footer = () => {
       <div className="flex gap-x-9">
         <Link href="/terms-of-use">Terms & Conditions</Link>
         <Link href="/privacy-policy">Privacy Policy</Link>
+        <Link href='https://www.instagram.com/oysterlabs_/'><Instagram /></Link>
+        <Link href="https://github.com/Pheeleex"><Github /></Link>
       </div>
     </footer>
   )

@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import ResponsiveCanvas from './Canvas/ComputerCanvas';
 import TechStack from './TechStack';
 
-const About = () => {
+const About: React.FC = () => {
   const stacks = ['Vuejs', 'Nextjs', 'Threejs', 'Typescript'];
 
   const card1Ref = useRef<HTMLDivElement>(null);
@@ -12,35 +12,33 @@ const About = () => {
   const card4Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ paused: true }); // Start with timeline paused
+    const tl = gsap.timeline({ paused: true });
 
     tl.fromTo(card1Ref.current, { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power2.out' })
       .fromTo(card2Ref.current, { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power2.out', delay: 0.2 })
-      .fromTo(card3Ref.current, { x: 200, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power2.out', delay: 0.4 })
-      .fromTo(card4Ref.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power2.out', delay: 0.6 });
+      .fromTo(card3Ref.current, { x: 200, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power2.out', delay: 0.1 })
+      .fromTo(card4Ref.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power2.out', delay: 0.2 });
 
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.3, // Trigger animation when 30% of the element is visible
+      threshold: 0.2,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          tl.play(); // Play the timeline animation when the element is in view
-          observer.unobserve(entry.target); // Stop observing once animation is triggered
+          tl.play();
+          observer.unobserve(entry.target);
         }
       });
     }, options);
 
-    // Observe each card reference
     if (card1Ref.current) observer.observe(card1Ref.current);
     if (card2Ref.current) observer.observe(card2Ref.current);
     if (card3Ref.current) observer.observe(card3Ref.current);
     if (card4Ref.current) observer.observe(card4Ref.current);
 
-    // Clean up observer on component unmount
     return () => {
       observer.disconnect();
     };
@@ -98,3 +96,4 @@ const About = () => {
 }
 
 export default About;
+

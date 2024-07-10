@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -14,10 +15,11 @@ interface props{
   title: string,
   image: string
   url: string
+  description: string
 }
 
 
-const ResourceCard = ({id, title, image, url}: props) => {
+const ResourceCard = ({id, title, image, url, description}: props) => {
   return (
     <Card className="w-full max-w-fit border-0  sm:max-w-[356px]">
       <Card className="w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]">
@@ -33,6 +35,7 @@ const ResourceCard = ({id, title, image, url}: props) => {
             />
           </div>
           <CardTitle className="text-white paragraph-semibold line-clamp-1 w-full text-left">{title}</CardTitle>
+          <CardDescription className="text-white">{description}</CardDescription>
         </CardHeader>
       </Link>
       <CardContent className="flex-between mt-4 p-0">     

@@ -8,6 +8,7 @@ import cardItems from '@/public/cardItems'
 import Intro from '@/app/components/Intro'
 import About from '@/app/components/About'
 import StepCards from '@/app/components/Steps'
+import Contact from '@/app/components/Contact'
 
 const Home = () => {
   const [activeLink, setActiveLink] = useState('all')
@@ -52,6 +53,7 @@ const Home = () => {
                       title={items.title}
                       image={items.image}
                       url={items.url}
+                      description={items.description}
                 />
               ))
              ) :(
@@ -65,6 +67,7 @@ const Home = () => {
             <StepCards />
         </section>
       </section>
+      <Contact />
     </main>
   )
 }
