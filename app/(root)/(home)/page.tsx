@@ -3,7 +3,7 @@ import Filters from '@/app/components/Filters'
 import Header from '@/app/components/Header'
 import ResourceCard from '@/app/components/ResourceCard'
 import SearchForm from '@/app/components/SearchForm'
-import React, { useState } from 'react'
+import React, { Suspense, useState } from 'react'
 import cardItems from '@/public/cardItems'
 import Intro from '@/app/components/Intro'
 import About from '@/app/components/About'
@@ -19,6 +19,7 @@ const Home = () => {
   const displayCategory = activeLink === 'all' ? 'All Projects' : activeLink;
 
   return (
+    <Suspense fallback={<div>Loading filters...</div>}>
     <main className="flex-center paddings w-full max-w-screen-2xl flex-col">
         <section className="nav-padding w-full" id="Intro">
             <Intro />
@@ -69,6 +70,7 @@ const Home = () => {
       </section>
       <Contact />
     </main>
+    </Suspense>
   )
 }
 

@@ -5,45 +5,6 @@ import TechStack from './TechStack';
 
 const About: React.FC = () => {
   const stacks = ['Vuejs', 'Nextjs', 'Threejs', 'Typescript'];
-
-  const card1Ref = useRef<HTMLDivElement>(null);
-  const card2Ref = useRef<HTMLDivElement>(null);
-  const card3Ref = useRef<HTMLDivElement>(null);
-  const card4Ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const tl = gsap.timeline({ paused: true });
-
-    tl.fromTo(card1Ref.current, { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power2.out' })
-      .fromTo(card2Ref.current, { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power2.out', delay: 0.2 })
-      .fromTo(card3Ref.current, { x: 200, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power2.out', delay: 0.1 })
-      .fromTo(card4Ref.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power2.out', delay: 0.2 });
-
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.2,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          tl.play();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-
-    if (card1Ref.current) observer.observe(card1Ref.current);
-    if (card2Ref.current) observer.observe(card2Ref.current);
-    if (card3Ref.current) observer.observe(card3Ref.current);
-    if (card4Ref.current) observer.observe(card4Ref.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   return (
     <div className='about-section w-full h-full mt-44 md:mt-48 lg:mt-52 bg'>
       <div className='about-flex justify-between gap-24'>
@@ -59,18 +20,18 @@ const About: React.FC = () => {
         </div>
         <div className='flex flex-col md:flex-row gap-8 items-center justify-center'>
           <div className='flex flex-col gap-12'>
-            <div className='about-card flex flex-col' ref={card1Ref}>
+            <div className='about-card flex flex-col'>
               <h1 className='text-gradient_purple-blue text-center text-2xl md:text-3xl lg:text-3xl'>
                 Flexible in communicating across different time zones
               </h1>
             </div>
-            <div className="about-card" ref={card2Ref}>
+            <div className="about-card">
               <h1 className='text-gradient_purple-blue text-center text-2xl md:text-3xl lg:text-3xl'>
                 Aesthetically pleasing yet functional web designs
               </h1>
             </div>
           </div>
-          <div className='about-card stack-card' ref={card3Ref}>
+          <div className='about-card stack-card'>
             <h1 className='text-gradient_purple-blue text-center text-xl md:text-2xl break-normal'>
               I'm always learning new technologies to stay at the forefront of web development.
             </h1>
@@ -83,7 +44,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="about-card" ref={card4Ref}>
+        <div className="about-card">
           <h1 className='text-gradient_purple-blue text-center text-xl md:text-2xl lg:text-2xl break-normal'>
             My primary goals when developing a website for clients are problem-solving, 
             revenue generation, and delivering an exceptional user experience.

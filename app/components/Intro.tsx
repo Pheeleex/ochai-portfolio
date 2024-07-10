@@ -1,50 +1,13 @@
-'use client'
-import React, { useRef } from 'react';
-import gsap from 'gsap';
-import { TextPlugin } from 'gsap/TextPlugin';
-import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(TextPlugin);
+import React from 'react';
+
 
 const Intro = () => {
-  const container = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const tl = gsap.timeline();
-
-    // Animation for the text "Hi, I'm Felix"
-    tl.to('.hi', {
-      text: " Felix",
-      duration: 1,
-      ease: 'none',
-      delay: 0.5,
-      stagger: 0.5
-    })
-    .to('.hi', {
-      fontSize: '2em',
-      duration: 0.5,
-      ease: 'power2.out',
-    })
-    .to('.hi', {
-      fontSize: '1em',
-      duration: 0.5,
-      ease: 'power2.in',
-    })
-    .to('.hi', {
-      onComplete: () => {
-        document.querySelector('.hi')?.classList.add('text-gradient_purple-blue');
-      },
-      duration: 0,
-    })
-    .to('.dev', {
-      opacity: 1,
-      duration: 0.5,
-      ease: 'power2.in'
-    });
-  }, { scope: container });
+ 
+   
 
   return (
-    <div ref={container} className='intro mt-20 flex flex-col items-center gap-6'>
+    <div className='intro mt-20 flex flex-col items-center gap-6'>
       <span className='text-[15px] md:2xl text-white break-normal text-center'>
         Let's create fun experiences together
       </span>
