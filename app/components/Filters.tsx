@@ -1,7 +1,8 @@
 'use client'
+import React, { Suspense } from 'react';
 import { formUrlQuery } from '@/lib/utils';
 import { useRouter, useSearchParams } from 'next/navigation';
-import React from 'react';
+
 
 interface FiltersProps {
   activeLink: string;
