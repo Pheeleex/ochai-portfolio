@@ -36,6 +36,7 @@ const Filters: React.FC<FiltersProps> = ({ activeLink, onFilterChange }) => {
   };
 
   return (
+    <Suspense fallback={<div>Loading filters...</div>}>
     <ul className="text-white-800 body-text no-scrollbar flex w-full max-w-full gap-2 overflow-auto py-12 sm:max-w-2xl">
       {links.map((link) => (
         <button
@@ -47,6 +48,7 @@ const Filters: React.FC<FiltersProps> = ({ activeLink, onFilterChange }) => {
         </button>
       ))}
     </ul>
+  </Suspense>
   );
 };
 
