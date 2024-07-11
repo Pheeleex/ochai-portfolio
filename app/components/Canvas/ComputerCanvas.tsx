@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import PngComputer from '../../../public/desktop/computer.png'
 import Image from "next/image";
+import { AnimatePresence } from "framer-motion";
 
 
 
@@ -15,6 +16,7 @@ const Computer = () => {
   console.log("Scene loaded:", scene);
 
   return (
+    <AnimatePresence>
     <mesh>
       <hemisphereLight intensity={1.15} groundColor='black' />
       <spotLight
@@ -33,6 +35,7 @@ const Computer = () => {
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
+    </AnimatePresence>
   );
 };
 

@@ -40,7 +40,7 @@ const ResourceCard = ({id, title, image, url, description}: props) => {
       </Link>
       <CardContent className="flex-between mt-4 p-0">     
         <Link href={url} target="_blank" className="flex-center text-gradient_purple-blue body-semibold gap-1.5">
-         See More
+         Check it out
           <Image src="/arrow-blue.svg" width={13} height={10} alt="arrow" />
         </Link>
       </CardContent>

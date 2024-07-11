@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
             onChange={handleChange}
             className="form-textarea w-full p-4 col-span-2 h-40 resize-none bg-transparent outline-none text-white"
         />
-        <button className="bg-transparent border border-white-400 p-2 w-[200px] m-4 text-white" type="submit">
+        <button className="bg-transparent border border-white-400 p-2 w-[200px] m-4 text-white cursor-pointer" type="submit">
             Send Message
         </button>
     </form>
