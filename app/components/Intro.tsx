@@ -1,10 +1,13 @@
-
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const Intro = () => {
- 
-   
+  const handleAnimationComplete = () => {
+    const hiElement = document.querySelector('.hi');
+    if (hiElement) {
+      hiElement.classList.add('text-gradient_blue-purple');
+    }
+  };
 
   return (
     <div className='intro mt-20 flex flex-col items-center gap-6'>
@@ -16,13 +19,25 @@ const Intro = () => {
       </h1>
       <div>
         <p className='greet text-center text-[30px] md:text-4xl lg:text-5xl mb-4 font-bold text-white'>
-          Hi, I'm 
-          <span className='hi text-white'></span>
+          Hi, I'm&nbsp;
+          <motion.span 
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ 
+              opacity: [0, 0.6, 1], 
+              scale: [0, 1.2, 1]
+            }}
+            onAnimationComplete={handleAnimationComplete}
+            transition={{ duration: 1.5 }}
+            className='hi text-white inline-block'>Felix</motion.span>
         </p>
-        <p className='dev text-center text-2xl text-white break-normal opacity-0'>
+        <motion.p
+          initial={{opacity:0}}
+          whileInView={{opacity: 1}}
+          transition={{duration: 1}}
+        className='dev text-center text-2xl text-white break-normal'>
           I am a web developer based in Nigeria. <br />
           Open to work remotely with clients all over the world
-        </p>
+        </motion.p>
       </div>
     </div>
   );
