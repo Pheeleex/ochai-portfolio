@@ -37,7 +37,7 @@ const cardItems: CardItem[] =[
         title: 'Property App',
         image: '/OysterEstate.png',
         category: 'Real Estate',
-        url: 'https://ochai-portfolio.vercel.app/',
+        url: 'https://real-estate-app-umber-zeta.vercel.app/',
         description: `This web application converts 90% of prospective clients and 
          simplify the listing process for real estate and property companies.`
     },
