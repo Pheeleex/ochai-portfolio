@@ -1,10 +1,18 @@
-import { motion, useScroll } from "framer-motion"
+'use client'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import React from 'react';
 import ResponsiveCanvas from './Canvas/ComputerCanvas';
 import TechStack from './TechStack';
 
 const About: React.FC = () => {
   const stacks = ['Vuejs', 'Nextjs', 'Threejs', 'Typescript'];
+  
+  // Use useInView to detect when the stack items are in view
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Ensures the animation triggers only once
+  });
+
   return (
     <div className='about-section w-full h-full mt-44 md:mt-48 lg:mt-52 bg'>
       <div className='about-flex justify-between gap-24'>
@@ -12,8 +20,7 @@ const About: React.FC = () => {
           <div className='canvas'>
             <ResponsiveCanvas />
           </div>
-          <div
-            className='w-3/4'>
+          <div className='w-3/4'>
             <h2 className='text-gradient_purple-blue text-center sm:text-xl md:text-4xl font-bold'>
               Welcome to OysterVerse
             </h2>
@@ -22,37 +29,40 @@ const About: React.FC = () => {
         <div className='flex flex-col md:flex-row gap-8 items-center justify-center'>
           <div className='flex flex-col gap-12'>
             <motion.div
-            initial={{scale: 0}}
-            whileInView={{scale: [0, 1.2, 1]}}
-            transition={{duration: 1}} className='about-card flex flex-col'>
+              initial={{ scale: 0 }}
+              whileInView={{ scale: [0, 1.2, 1] }}
+              transition={{ duration: 1 }} 
+              className='about-card flex flex-col'>
               <h1 className='text-gradient_purple-blue text-center text-2xl md:text-3xl lg:text-3xl'>
                 Flexible in communicating across different time zones
               </h1>
             </motion.div>
             <motion.div
-            initial={{scale: 0}}
-            whileInView={{scale: [0, 1.2, 1]}}
-            transition={{duration: 1}} className="about-card">
+              initial={{ scale: 0 }}
+              animate={inView ? { scale: 1 } : {}}
+              transition={{ duration: 1 }} 
+              className="about-card">
               <h1 className='text-gradient_purple-blue text-center text-2xl md:text-3xl lg:text-3xl'>
                 Aesthetically pleasing yet functional web designs
               </h1>
             </motion.div>
           </div>
           <motion.div
-              initial={{x: 100}}
-              whileInView={{x: [250, 0]}}
-              transition={{duration: 1.2}}
-             className='about-card stack-card'>
+            initial={{ x: 100 }}
+            animate={inView ? { x: 0 } : {}}
+            transition={{ duration: 1.2 }}
+            className='about-card stack-card'>
             <h1 className='text-gradient_purple-blue text-center text-xl md:text-2xl break-normal'>
               I'm always learning new technologies to stay at the forefront of web development.
             </h1>
-            <div className='stack flex flex-wrap gap-4'>
+            <div className='stack flex flex-wrap gap-4' ref={ref}>
               {stacks.map((stack) => (
                 <motion.div 
-                  initial={{y:0}}
+                  initial={{ y: 100 }}
                   whileInView={{y: [100, 0]}}
-                  transition={{duration:2.2}}
-                  key={stack} className='bg-blue-200 opacity-75 p-2 rounded-md text-blue-800'>
+                  transition={{ duration: 2.2 }}
+                  key={stack} 
+                  className='bg-blue-200 opacity-75 p-2 rounded-md text-blue-800'>
                   {stack}
                 </motion.div>
               ))}
@@ -72,4 +82,3 @@ const About: React.FC = () => {
 }
 
 export default About;
-

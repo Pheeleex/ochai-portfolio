@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
   };
 
     return(
-        <div className="form-container flex flex-col justify-center items-center h-screen">
+        <div className="form-container flex flex-col justify-center items-center h-screen mt-32 md:mt-36">
                 <h1 className="text-3xl my-8 text-white">I would love to hear from you</h1>
     <form onSubmit={handleSubmit} className="form-grid flex flex-col gap-4 w-full max-w-lg border  border-white">
         <div className="form-group flex">

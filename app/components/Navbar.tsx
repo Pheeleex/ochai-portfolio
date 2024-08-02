@@ -11,7 +11,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="nav flex-center fixed top-0 z-50 w-full border-b-2 border-black-200 bg-black-100 py-7 text-white">
+    <nav className="nav flex-center fixed top-0 z-50 w-full border-b-2 border-black-200 bg-black-100 py-7 
+    text-white">
       <div className="flex-between mx-auto w-full lg:max-w-screen-2xl px-6 xs:px-8 sm:px-12">
         <Image
           src="/hamburger-menu.svg"
