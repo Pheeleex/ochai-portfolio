@@ -14,7 +14,7 @@ const About: React.FC = () => {
   });
 
   return (
-    <div className='about-section w-full h-full mt-44 md:mt-48 lg:mt-52 bg'>
+    <div className='about-section w-full h-full'>
       <div className='about-flex justify-between gap-24'>
         <div className='computer w-full'>
           <div className='canvas'>

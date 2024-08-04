@@ -10,7 +10,7 @@ const Intro = () => {
   };
 
   return (
-    <div className='intro mt-20 flex flex-col items-center gap-6'>
+    <div className='intro flex flex-col items-center gap-6'>
       <span className='text-[15px] md:2xl text-white break-normal text-center'>
         Let's create fun experiences together
       </span>
@@ -35,7 +35,7 @@ const Intro = () => {
           whileInView={{opacity: 1}}
           transition={{duration: 1}}
         className='dev text-center text-2xl text-white break-normal'>
-          I am a web developer based in Nigeria. <br />
+          I am a software developer based in Nigeria. <br />
           Open to work remotely with clients all over the world
         </motion.p>
       </div>

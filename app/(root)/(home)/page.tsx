@@ -28,7 +28,7 @@ const Home = () => {
         <section className="nav-padding w-full" id="About">
             <About />
         </section>
-      <section className="nav-padding w-full mt-32" id="RecentProjects">
+      <section className="nav-padding w-full" id="RecentProjects">
         <div className="flex-center relative min-h-[274px] w-full flex-col rounded-xl bg-banner bg-cover 
         bg-center text-center mt-8">
           <h1 className="sm:heading1 heading2 mb-6 text-center text-white">Recent Projects</h1>
