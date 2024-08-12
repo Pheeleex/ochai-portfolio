@@ -50,7 +50,16 @@ const cardItems: CardItem[] =[
             description: `A mix of great advertising, aesthetics and functionality, 
             cloning the landing showcases my skills in; turning designs to code, paying attention to advertising and SEO key words, 
             paying attention to brand placement and brand identity.`
-    }
+    },
+    {     
+        id: 'skumb0n1m',
+        title: 'Daytona Rentals',
+        image: '/carbooking(1).png',
+        category: 'Ecommerce',
+        url: 'https://carbooking-psi.vercel.app/',
+        description: `Car leasing, rentals and booking from a diverse vehicle inventory, with full specifications
+        of each car.`
+}
 ]
 
 export default cardItems

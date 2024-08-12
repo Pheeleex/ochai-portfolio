@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from "react"
-
+import emailjs from "@emailjs/browser";
 
 interface ContactForm {
     email: string;
@@ -12,6 +12,8 @@ const Contact: React.FC = () => {
         fullname: '',
         message: '',
     })
+    
+  const [loading, setLoading] = useState(false);
     const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
         setContactForm((prevForm) => ({
@@ -22,7 +24,39 @@ const Contact: React.FC = () => {
 
      const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(contactForm);
+    setLoading(true);
+
+    emailjs
+      .send(
+       'service_n6lbyzu',
+        'template_cmaqnpt',
+        {
+          from_name: contactForm.fullname,
+          to_name: "Pheeleex Ochai",
+          from_email: contactForm.email,
+          to_email: "ohemufelix@gmail.com",
+          message: contactForm.message,
+        },
+        'Ty-5lVqBMOEhNjLzO'
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+
+          setContactForm({
+            fullname: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+
+          alert("Ahh, something went wrong. Please try again.");
+        }
+      );
   };
 
     return(
@@ -54,7 +88,8 @@ const Contact: React.FC = () => {
             onChange={handleChange}
             className="form-textarea w-full p-4 col-span-2 h-40 resize-none bg-transparent outline-none text-white"
         />
-        <button className="bg-transparent border border-white-400 p-2 w-[200px] m-4 text-white cursor-pointer" type="submit">
+        <button className="bg-transparent border border-white-400 p-2 w-[200px] m-4 
+        text-white cursor-pointer hover:bg-white-800 hover:text-black-400" type="submit">
             Send Message
         </button>
     </form>
