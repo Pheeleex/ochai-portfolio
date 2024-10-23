@@ -1,17 +1,23 @@
 'use client'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ResponsiveCanvas from './Canvas/ComputerCanvas';
 import TechStack from './TechStack';
 
 const About: React.FC = () => {
   const stacks = ['Vuejs', 'Nextjs', 'Threejs', 'Typescript'];
+  const [hasAnimated, setHasAnimated] = useState(false);
   
   // Use useInView to detect when the stack items are in view
   const { ref, inView } = useInView({
     triggerOnce: true, // Ensures the animation triggers only once
   });
+
+  useEffect(() => {
+    // Set hasAnimated to true after the first render
+    setHasAnimated(true);
+  }, []);
 
   return (
     <div className='about-section w-full h-full'>
@@ -26,31 +32,22 @@ const About: React.FC = () => {
             </h2>
           </div>
         </div>
-        <div className='flex flex-col md:flex-row gap-8 items-center justify-center'>
-          <div className='flex flex-col gap-12'>
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: [0, 1.2, 1] }}
-              transition={{ duration: 1 }} 
+        <div className='flex flex-col md:flex-row gap-8 items-center justify-center mt-20'>
+          <div className='flex flex-col gap-20'>
+            <div
               className='about-card flex flex-col'>
               <h1 className='text-gradient_purple-blue text-center text-2xl md:text-3xl lg:text-3xl'>
                 Flexible in communicating across different time zones
               </h1>
-            </motion.div>
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={inView ? { scale: 1 } : {}}
-              transition={{ duration: 1 }} 
+            </div>
+            <div
               className="about-card">
               <h1 className='text-gradient_purple-blue text-center text-2xl md:text-3xl lg:text-3xl'>
                 Aesthetically pleasing yet functional web designs
               </h1>
-            </motion.div>
+            </div>
           </div>
-          <motion.div
-            initial={{ x: 100 }}
-            animate={inView ? { x: 0 } : {}}
-            transition={{ duration: 1.2 }}
+          <div
             className='about-card stack-card'>
             <h1 className='text-gradient_purple-blue text-center text-xl md:text-2xl break-normal'>
               I'm always learning new technologies to stay at the forefront of web development.
@@ -67,7 +64,7 @@ const About: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
         <div className="about-card">
           <h1 className='text-gradient_purple-blue text-center text-xl md:text-2xl lg:text-2xl break-normal'>
