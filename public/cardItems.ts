@@ -33,15 +33,25 @@ const cardItems: CardItem[] =[
          CRM/business operation tools to help clinic automate administrative tasks, create a better user experience for patients,
          and ease communication with their patients`
     },
-    {
-        id: 'https://oyster-tracker.vercel.app/',
-        title: 'Budget Planner and Expense Tracker',
-        image: '/moneytrack.png',
-        category: 'Fintech',
-        url: 'https://oyster-tracker.vercel.app/',
-        description: `Developed a CRUD finance web app to help users track spending, 
-        set savings goals, and manage budgets effectively. Utilized ReactJS for a seamless 
-        UI and Firebase for real-time data storage and authentication.`
+    {     
+        id: 'skumb0n1m',
+        title: 'Daytona Rentals',
+        image: '/carbooking(1).png',
+        category: 'CRM/Business Operations',
+        url: 'https://oyster-rentals.vercel.app/',
+        description: `Our car dealership app simplifies the customer experience with easy test drive bookings,
+         service scheduling, and personalized dashboards. Admins can efficiently manage inventory, appointments, 
+        and more—streamlining dealership operations for all.`
+    },
+    {     
+        id: 'skumb0n1m',
+        title: 'Care Pulse',
+        image: '/carepulse.png',
+        category: 'Telemedicine',
+        url: 'https://care-pulse-gray.vercel.app/',
+        description: `Easy use telemedicine app that let's users create, cancel and schedule appointments, create and
+        store their patients record, view history etc. Admins are able to process appointments, write prescriptions and
+        more.`
     },
     {
         id: '9ub',
@@ -62,15 +72,17 @@ const cardItems: CardItem[] =[
             cloning the landing showcases my skills in; turning designs to code, paying attention to advertising and SEO key words, 
             paying attention to brand placement and brand identity.`
     },
-    {     
-        id: 'skumb0n1m',
-        title: 'Daytona Rentals',
-        image: '/carbooking(1).png',
-        category: 'CRM/Business Operations',
-        url: 'https://oyster-rentals.vercel.app/',
-        description: `Car leasing, rentals and booking from a diverse vehicle inventory, with full specifications
-        of each car.`
-}
+    
+{
+        id: 'https://oyster-tracker.vercel.app/',
+        title: 'Budget Planner and Expense Tracker',
+        image: '/moneytrack.png',
+        category: 'Fintech',
+        url: 'https://oyster-tracker.vercel.app/',
+        description: `Developed a CRUD finance web app to help users track spending, 
+        set savings goals, and manage budgets effectively. Utilized ReactJS for a seamless 
+        UI and Firebase for real-time data storage and authentication.`
+    }
 ]
 
 export default cardItems
