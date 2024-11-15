@@ -17,11 +17,21 @@ const cardItems: CardItem[] =[
         id: '1ws',
         title: '3D Shirt customiser',
         image: '/OysterSteeze.png',
-        category: 'Ecommerce, 3D & AR',  // Use an array
+        category: 'Ecommerce, 3D & AR',  
         url: 'https://modern-estore.vercel.app',
          description: `We all love personalised products, even your customers,
          check out this 3D tshirt customiser and see how much your product needs one.
          A great use case of AR/AI technology with Artificial Inelligence`
+    },
+    {
+        id: '14s',
+        title: 'StoreIt',
+        image: '/NELLYA',
+        category: 'Others',  
+        url: 'https://turbo-save.vercel.app/',
+         description: `The best storage solution you don't know about. With realtime device syncing, file
+         sharing and collaborative features, it is great for both personal and collaborative use.
+         Try it out and share with friends.`
     },
     {
         id: '2mr',
