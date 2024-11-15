@@ -26,8 +26,8 @@ const cardItems: CardItem[] =[
     {
         id: '14s',
         title: 'StoreIt',
-        image: '/NELLYA',
-        category: 'Others',  
+        image: '/NELLYA.png',
+        category: 'others',  
         url: 'https://turbo-save.vercel.app/',
          description: `The best storage solution you don't know about. With realtime device syncing, file
          sharing and collaborative features, it is great for both personal and collaborative use.
