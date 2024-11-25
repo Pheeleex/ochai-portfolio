@@ -10,7 +10,7 @@ interface FiltersProps {
 }
 
 const Filters: React.FC<FiltersProps> = ({ activeLink, onFilterChange }) => {
-  const links = ['all', 'Real estate', 'Ecommerce', 'FinTech', '3D & AR', 'CRM/Business Operations'];
+  const links = ['all', 'Real estate', 'Ecommerce', 'WEB3', '3D & AR', 'CRM/Business Operations', 'other'];
   const searchParams = useSearchParams();
   const router = useRouter();
 
