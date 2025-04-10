@@ -1,0 +1,46 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.auto-scroll {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.auto-scroll-content {
+  display: flex;
+  gap: 1rem;
+  align-items: center; /* Ensures the images are vertically centered */
+  animation: scroll 20s linear infinite;
+}
+
+.auto-scroll-item {
+  flex: 0 0 auto;
+  margin: 0 10px;
+}
+
+.stack{
+  max-width: 75%;
+  max-height: 75%;
+}
+
+@media (max-width: 800px) {
+  .stack{
+    max-width: 50%;
+    max-height: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .stack{
+    max-width: 27%;
+    max-height: 30%;
+  }
+}
