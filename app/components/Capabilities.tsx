@@ -62,7 +62,7 @@ const Capabilities = () => {
   return (
     <section
       id="Capabilities"
-      className="relative w-full scroll-mt-[98px] overflow-hidden border-b border-[#b6a58c] bg-[#f1e6d2] text-[#17130f]"
+      className="relative w-full scroll-mt-[98px] overflow-x-clip border-b border-[#b6a58c] bg-[#f1e6d2] text-[#17130f]"
     >
       <div
         aria-hidden="true"
@@ -96,7 +96,7 @@ const Capabilities = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: reduceMotion ? 0 : 0.52 }}
-            className="lg:pr-4"
+            className="lg:sticky lg:top-[124px] lg:self-start lg:pr-4"
           >
             <p className="mb-5 font-mono text-[9px] uppercase tracking-[0.2em] text-[#756958] sm:text-[10px]">
               What I build

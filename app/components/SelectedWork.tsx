@@ -61,7 +61,7 @@ const SelectedWork = () => {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-screen-2xl py-16 sm:py-20 lg:py-24">
+      <div className="relative mx-auto w-full max-w-screen-2xl pt-16 pb-8 sm:pt-20 sm:pb-10 lg:pt-24 lg:pb-12">
         <div className="grid gap-10 border-b border-[#493f33] pb-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(380px,0.92fr)] lg:items-end lg:gap-20 lg:pb-14">
           <div>
             <div className="mb-5 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[9px] uppercase tracking-[0.22em] text-[#9f917d] sm:text-[10px]">
