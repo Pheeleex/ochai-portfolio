@@ -19,13 +19,9 @@ const Home = () => {
 
         <Capabilities />
 
-        {/* <section className="nav-padding w-full" id="About">
-          <About />
-        </section> */}
+        <About />
 
-        <section className="nav-padding w-full" id="Approach">
-          <StepCards />
-        </section>
+        <StepCards />
 
         <Contact />
       </main>
