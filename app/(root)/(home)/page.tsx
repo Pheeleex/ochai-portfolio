@@ -2,6 +2,7 @@
 import React, { Suspense } from 'react'
 import Intro from '@/app/components/Intro'
 import SelectedWork from '@/app/components/SelectedWork'
+import Capabilities from '@/app/components/Capabilities'
 import About from '@/app/components/About'
 import StepCards from '@/app/components/Steps'
 import Contact from '@/app/components/Contact'
@@ -16,9 +17,11 @@ const Home = () => {
 
         <SelectedWork />
 
-        <section className="nav-padding w-full" id="About">
+        <Capabilities />
+
+        {/* <section className="nav-padding w-full" id="About">
           <About />
-        </section>
+        </section> */}
 
         <section className="nav-padding w-full" id="Approach">
           <StepCards />
