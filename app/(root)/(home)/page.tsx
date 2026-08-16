@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <Suspense fallback={<div className='h-[60%] text-[20rem]'>Loading filters...</div>}>
-      <main className="flex-center paddings w-full max-w-screen-2xl flex-col">
+      <main className="flex-center paddings !pt-0 w-full max-w-screen-2xl flex-col">
         <section className="w-full pt-[98px]" id="Intro">
           <Intro />
         </section>

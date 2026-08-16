@@ -110,7 +110,7 @@ const HeroNetwork = () => {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.16]"
+        className="pointer-events-none absolute inset-0 opacity-[0.2]"
         style={{
           backgroundImage:
             "radial-gradient(circle at 1px 1px, rgba(244,234,215,0.45) 1px, transparent 0)",
@@ -146,8 +146,8 @@ const HeroNetwork = () => {
               key={path}
               d={path}
               fill="none"
-              stroke="rgba(190,176,154,0.24)"
-              strokeWidth="0.34"
+              stroke="rgba(190,176,154,0.34)"
+              strokeWidth="0.38"
               strokeDasharray="1.2 1.8"
               vectorEffect="non-scaling-stroke"
             />
@@ -227,15 +227,15 @@ const HeroNetwork = () => {
       </div>
 
       <div className="relative z-10 mt-4 border-t border-[#4d4438] pt-3">
-        <div className="mb-2 flex items-center justify-between font-mono text-[8px] uppercase tracking-[0.2em] text-[#7f7362] sm:text-[9px]">
+        <div className="mb-2 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.18em] text-[#918472] sm:text-[10px]">
           <span>Recent signals</span>
           <span>0{activeIndex + 1} / 0{signals.length}</span>
         </div>
-        <div className="flex min-h-6 flex-wrap gap-x-4 gap-y-2 font-mono text-[8px] uppercase tracking-[0.12em] sm:text-[9px]">
+        <div className="flex min-h-6 flex-wrap gap-x-4 gap-y-2 font-mono text-[9px] uppercase tracking-[0.12em] sm:text-[10px]">
           {signals.map((signal, index) => (
             <span
               key={signal.label}
-              className={index === activeIndex ? "text-[#e98b63]" : "text-[#746b5f]"}
+              className={index === activeIndex ? "text-[#f09a72]" : "text-[#928673]"}
             >
               <span className="mr-1.5">•</span>
               {signal.label}
