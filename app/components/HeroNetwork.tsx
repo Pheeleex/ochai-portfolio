@@ -134,7 +134,7 @@ const HeroNetwork = () => {
         </span>
       </div>
 
-      <div className="relative mt-4 aspect-[1.1/1] min-h-[330px] sm:aspect-[1.35/1] sm:min-h-[380px] lg:min-h-[440px]">
+      <div className="relative mt-4 min-h-[280px] w-full aspect-[0.85/1] sm:aspect-[1.35/1] sm:min-h-[380px] lg:min-h-[440px]">
         <svg
           className="absolute inset-0 h-full w-full"
           viewBox="0 0 100 100"

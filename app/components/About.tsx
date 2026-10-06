@@ -53,9 +53,9 @@ const About = () => {
         className="pointer-events-none absolute -right-8 top-56 h-[250px] w-[250px] rounded-full border border-[#d9673b]/10 sm:h-[340px] sm:w-[340px]"
       />
 
-      <div className="relative mx-auto w-full max-w-screen-2xl py-16 sm:py-20 lg:py-24">
+      <div className="site-shell relative py-16 sm:py-20 lg:py-24">
         <div className="mb-10 flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-[#493f33] pb-6 font-mono text-[9px] uppercase tracking-[0.22em] text-[#8f826f] sm:text-[10px] lg:mb-14">
-          <span className="text-[#d9673b]">04 / About</span>
+          <span className="text-[#d9673b]">05 / About</span>
           <span className="hidden h-px w-10 bg-[#5b5042] sm:block" aria-hidden="true" />
           <span>Person / product / engineering</span>
         </div>
@@ -79,9 +79,6 @@ const About = () => {
             <div className="mt-9 max-w-[700px] space-y-5 text-[15px] leading-7 text-[#c3b6a3] sm:text-base sm:leading-8 lg:text-[17px]">
               <p>
                 I&apos;m Felix, a software engineer based in Lagos. I&apos;m most interested in the point where a real business problem becomes a clear product, a dependable system, and something people can actually use day to day.
-              </p>
-              <p>
-                I care about the work before the code as much as the build itself — understanding why a process exists, where people are working around it, and whether custom software is genuinely the right answer. Sometimes an existing tool is enough; when the gap is specific enough to matter, that&apos;s the kind of problem I like solving.
               </p>
             </div>
 

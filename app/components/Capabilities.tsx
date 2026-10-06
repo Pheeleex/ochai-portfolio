@@ -83,9 +83,9 @@ const Capabilities = () => {
         className="pointer-events-none absolute -right-10 top-24 h-56 w-56 rounded-full border border-[#d9673b]/15 sm:h-72 sm:w-72 lg:right-12 lg:top-32"
       />
 
-      <div className="relative mx-auto w-full max-w-screen-2xl py-16 sm:py-20 lg:py-24">
+      <div className="site-shell relative py-16 sm:py-20 lg:py-24">
         <div className="mb-10 flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-[#b6a58c] pb-5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#776b5b] sm:text-[10px] lg:mb-14">
-          <span className="text-[#c5522d]">03 / Capabilities</span>
+          <span className="text-[#c5522d]">04 / Capabilities</span>
           <span className="hidden h-px w-10 bg-[#9d8d76] sm:block" aria-hidden="true" />
           <span>Systems / products / delivery</span>
         </div>
@@ -103,12 +103,8 @@ const Capabilities = () => {
             </p>
 
             <h2 className="max-w-[690px] text-[clamp(3.15rem,6.5vw,7rem)] font-black uppercase leading-[0.86] tracking-[-0.06em] text-[#16120e]">
-              Built around how the work actually happens<span className="text-[#d9673b]">.</span>
+              From team tools to connected operations<span className="text-[#d9673b]">.</span>
             </h2>
-
-            <p className="mt-8 max-w-[610px] text-[15px] leading-7 text-[#5f5547] sm:text-base sm:leading-8 lg:text-[17px]">
-              I do not start with a software category and force the business into it. I start with the people, the process, the constraints, and the systems already in place — then build the part that needs to work better.
-            </p>
 
             <div className="mt-10 border-y border-[#b6a58c] py-5 font-mono text-[9px] uppercase tracking-[0.18em] text-[#756958] sm:text-[10px]">
               <div className="mb-3 flex items-center justify-between gap-5">

@@ -32,15 +32,6 @@ const selectedProjects = [
     image: "/NELLYA.png",
     url: "https://turbo-save.vercel.app/",
   },
-  {
-    number: "04",
-    title: "3D Shirt Customiser",
-    category: "Interactive Commerce",
-    description:
-      "An interactive commerce experience exploring 3D product customisation and AI-assisted personalisation for a more expressive buying journey.",
-    image: "/OysterSteeze.png",
-    url: "https://modern-estore.vercel.app",
-  },
 ];
 
 const SelectedWork = () => {
@@ -61,13 +52,13 @@ const SelectedWork = () => {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-screen-2xl pt-16 pb-8 sm:pt-20 sm:pb-10 lg:pt-24 lg:pb-12">
+      <div className="site-shell relative pt-16 pb-8 sm:pt-20 sm:pb-10 lg:pt-24 lg:pb-12">
         <div className="grid gap-10 border-b border-[#493f33] pb-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(380px,0.92fr)] lg:items-end lg:gap-20 lg:pb-14">
           <div>
             <div className="mb-5 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[9px] uppercase tracking-[0.22em] text-[#9f917d] sm:text-[10px]">
-              <span className="text-[#d9673b]">02 / Selected Work</span>
+              <span className="text-[#d9673b]">03 / Selected Work</span>
               <span className="hidden h-px w-10 bg-[#5b5042] sm:block" aria-hidden="true" />
-              <span>Built systems / live projects</span>
+              <span>Public builds / live projects</span>
             </div>
 
             <motion.h2
@@ -91,7 +82,7 @@ const SelectedWork = () => {
           >
             <div className="border-y border-[#493f33]">
               <div className="flex items-center justify-between gap-5 py-4 font-mono text-[9px] uppercase tracking-[0.2em] text-[#8f826f] sm:text-[10px]">
-                <span className="text-[#d9673b]">04 / Selected systems</span>
+                <span className="text-[#d9673b]">Project range</span>
                 <span>Range / not a niche</span>
               </div>
 
@@ -100,7 +91,6 @@ const SelectedWork = () => {
                   ["01", "Business operations"],
                   ["02", "Healthcare systems"],
                   ["03", "Realtime tools"],
-                  ["04", "Interactive products"],
                 ].map(([number, label]) => (
                   <div
                     key={number}
@@ -117,12 +107,7 @@ const SelectedWork = () => {
               </div>
             </div>
 
-            <p className="mt-7 max-w-[570px] text-[15px] leading-7 text-[#c6b9a6] sm:text-base sm:leading-8 lg:text-[17px]">
-              A selection of products where the interesting part was not only the interface, but the rules, data, automation, and day-to-day work underneath it.
-            </p>
-
             <div className="mt-6 flex items-center justify-between gap-5 border-t border-[#41382e] pt-4 font-mono text-[9px] uppercase tracking-[0.18em] text-[#827664] sm:text-[10px]">
-              <span>Selected / 04</span>
               <span>Web · Systems · Product</span>
             </div>
           </motion.aside>
@@ -202,7 +187,7 @@ const SelectedWork = () => {
 
         <div className="flex flex-col gap-4 pt-7 font-mono text-[9px] uppercase tracking-[0.18em] text-[#827664] sm:flex-row sm:items-center sm:justify-between sm:text-[10px]">
           <span>A focused selection, not an archive.</span>
-          <span className="text-[#b5a791]">Proof over project count.</span>
+          <span className="text-[#b5a791]">Live project links</span>
         </div>
       </div>
     </section>

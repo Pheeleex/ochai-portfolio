@@ -68,9 +68,9 @@ const StepCards = () => {
         className="pointer-events-none absolute -left-20 top-72 h-[210px] w-[210px] rounded-full border border-[#d9673b]/15 sm:h-[330px] sm:w-[330px]"
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-screen-2xl py-16 sm:py-20 lg:py-24">
+      <div className="site-shell relative z-10 py-16 sm:py-20 lg:py-24">
         <div className="mb-12 flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-[#ad9d83] pb-6 font-mono text-[9px] uppercase tracking-[0.22em] text-[#756956] sm:text-[10px] lg:mb-16">
-          <span className="text-[#c9532d]">05 / Process</span>
+          <span className="text-[#c9532d]">06 / Process</span>
           <span className="hidden h-px w-10 bg-[#9f8f75] sm:block" aria-hidden="true" />
           <span>Discovery / pilot / rollout</span>
         </div>
@@ -84,10 +84,6 @@ const StepCards = () => {
             <h2 className="max-w-[760px] text-[clamp(3.3rem,6.7vw,7.2rem)] font-black uppercase leading-[0.84] tracking-[-0.065em] text-[#17130f]">
               Start small<span className="text-[#d9673b]">.</span> Prove the value<span className="text-[#d9673b]">.</span> Then expand<span className="text-[#d9673b]">.</span>
             </h2>
-
-            <p className="mt-8 max-w-[590px] text-[15px] leading-7 text-[#625746] sm:text-base sm:leading-8">
-              I&apos;d rather earn the right to build more than begin by proposing a giant system. The goal is to understand the problem, prove the smallest useful version, and let real use determine what comes next.
-            </p>
 
             <div className="mt-9 border-y border-[#ad9d83] py-5 font-mono text-[9px] uppercase tracking-[0.16em] text-[#6d604f] sm:text-[10px]">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">

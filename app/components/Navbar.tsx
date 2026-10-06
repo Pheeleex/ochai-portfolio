@@ -5,10 +5,10 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { label: "Work", href: "#RecentProjects" },
-  { label: "About", href: "#About" },
-  { label: "Process", href: "#Approach" },
-  { label: "Contact", href: "#Contact" },
+  { label: "Work", href: "/#CaseStudies" },
+  { label: "About", href: "/#About" },
+  { label: "Process", href: "/#Approach" },
+  { label: "Contact", href: "/#Contact" },
 ];
 
 const Navbar = () => {
@@ -29,11 +29,11 @@ const Navbar = () => {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
       <nav
         aria-label="Primary navigation"
-        className="mx-auto max-w-screen-2xl border border-[#6f6250]/50 bg-[#11100d]/95 text-[#f4ead7] shadow-[0_12px_40px_rgba(0,0,0,0.22)] backdrop-blur-md"
+        className="mx-auto max-w-[1920px] border border-[#6f6250]/50 bg-[#11100d]/95 text-[#f4ead7] shadow-[0_12px_40px_rgba(0,0,0,0.22)] backdrop-blur-md"
       >
         <div className="flex min-h-[72px] items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link
-            href="#Intro"
+            href="/#Intro"
             onClick={closeMenu}
             className="group flex min-w-0 items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d9673b] focus-visible:ring-offset-4 focus-visible:ring-offset-[#11100d]"
             aria-label="Go to introduction"

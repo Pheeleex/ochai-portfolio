@@ -89,26 +89,18 @@ const Contact: React.FC = () => {
         className="pointer-events-none absolute right-10 top-52 h-[220px] w-[220px] rounded-full border border-[#d9673b]/10 sm:h-[340px] sm:w-[340px]"
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-screen-2xl py-16 sm:py-20 lg:py-24">
+      <div className="site-shell relative z-10 py-16 sm:py-20 lg:py-24">
         <div className="mb-12 flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-[#493f33] pb-6 font-mono text-[9px] uppercase tracking-[0.22em] text-[#8f826f] sm:text-[10px] lg:mb-16">
-          <span className="text-[#d9673b]">06 / Contact</span>
+          <span className="text-[#d9673b]">07 / Contact</span>
           <span className="hidden h-px w-10 bg-[#5b5042] sm:block" aria-hidden="true" />
           <span>Problem / conversation / next step</span>
         </div>
 
         <div className="grid gap-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,0.78fr)] lg:gap-20 xl:gap-28">
           <div>
-            <p className="mb-5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#817563] sm:text-[10px]">
-              Start with the problem
-            </p>
-
             <h2 className="max-w-[900px] text-[clamp(3.3rem,6.8vw,7.4rem)] font-black uppercase leading-[0.84] tracking-[-0.065em] text-[#f4ead7]">
               Have a process your current tools do not handle well<span className="text-[#d9673b]">?</span>
             </h2>
-
-            <p className="mt-8 max-w-[720px] text-[15px] leading-7 text-[#b8aa96] sm:text-base sm:leading-8 lg:text-[17px]">
-              Whether it is an internal platform, field tool, mobile workflow, integration, or something that does not fit neatly into an existing product, I am happy to understand the problem first.
-            </p>
 
             <div className="mt-10 border-y border-[#493f33] py-6">
               <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#d9673b] sm:text-[10px]">
@@ -196,9 +188,6 @@ const Contact: React.FC = () => {
                 </label>
 
                 <div className="flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="max-w-[390px] font-mono text-[8px] uppercase leading-5 tracking-[0.15em] text-[#746957] sm:text-[9px]">
-                    No pitch deck needed. A clear description of what is getting in the way is enough.
-                  </p>
                   <button
                     type="submit"
                     disabled={loading}

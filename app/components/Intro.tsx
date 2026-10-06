@@ -19,13 +19,13 @@ const Intro = () => {
         }}
       />
 
-      <div className="relative mx-auto grid min-h-[calc(100vh-98px)] max-w-screen-2xl items-center gap-12 px-0 pb-10 pt-4 md:pb-14 md:pt-5 lg:grid-cols-[minmax(0,1.03fr)_minmax(430px,0.97fr)] lg:gap-10 xl:gap-16">
-        <div className="relative z-10 max-w-4xl lg:py-8">
+      <div className="site-shell relative grid min-h-[calc(100vh-98px)] min-w-0 grid-cols-1 items-center gap-12 pb-10 pt-4 md:pb-14 md:pt-5 lg:grid-cols-[minmax(0,1.03fr)_minmax(430px,0.97fr)] lg:gap-10 xl:gap-16">
+        <div className="relative z-10 min-w-0 max-w-4xl lg:py-8">
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.45 }}
-            className="mb-5 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[9px] uppercase tracking-[0.22em] text-[#9f917d] sm:text-[10px]"
+            className="mb-5 flex min-w-0 flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[9px] uppercase tracking-[0.22em] text-[#9f917d] sm:text-[10px]"
           >
             <span className="text-[#d9673b]">01 / Introduction</span>
             <span className="hidden h-px w-10 bg-[#5b5042] sm:block" aria-hidden="true" />
@@ -36,7 +36,7 @@ const Intro = () => {
             initial={reduceMotion ? false : { opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.62, delay: reduceMotion ? 0 : 0.06 }}
-            className="max-w-[950px] text-[clamp(3.1rem,7.5vw,7.8rem)] font-black uppercase leading-[0.84] tracking-[-0.065em] text-[#f1e6d2]"
+            className="w-full min-w-0 max-w-[950px] break-words text-[clamp(2.35rem,10.8vw,3.1rem)] font-black uppercase leading-[0.84] tracking-[-0.065em] text-[#f1e6d2] sm:text-[clamp(3.1rem,7.5vw,7.8rem)]"
           >
             Software for the work behind the business<span className="text-[#d9673b]">.</span>
           </motion.h1>
@@ -45,7 +45,7 @@ const Intro = () => {
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.5, delay: reduceMotion ? 0 : 0.18 }}
-            className="mt-6 max-w-2xl text-[15px] leading-7 text-[#c6b9a6] sm:text-base sm:leading-8 lg:text-[17px]"
+            className="mt-6 w-full min-w-0 max-w-2xl text-[15px] leading-7 text-[#c6b9a6] sm:text-base sm:leading-8 lg:text-[17px]"
           >
             I design and build internal software around how teams actually work — from field and mobile tools to operational platforms, automation, integrations, and the systems that keep day-to-day work moving.
           </motion.p>
